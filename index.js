@@ -67,13 +67,24 @@ const record = [
        // }
    // }
   
-    function superbowlWin(record) {
-        const win = record.find(item => item.result === "W");
-       if (win){
-        return win.year
-       }else{
-        return undefined
-       }
-      }
+    // function superbowlWin(record) {
+    //     const win = record.find(item => item.result === "W");
+    //    if (win){
+    //     return win.year
+    //    }else{
+    //     return undefined
+    //    }
+    //   }
+
+    function superbowlWin(array){
+        const win=array.find(item=>{
+            if(item.result==='W'){
+                return true
+            }
+        })
+        return win?win.year:undefined
+
+    }
+    superbowlWin(record)
   
   
